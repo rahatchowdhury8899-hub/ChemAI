@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Data & models (too large for GitHub)
+models/
+*.pt
+*.joblib
+*.npy
+
+# Results (keep images only if needed)
+results/*.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+data/
+results/
+
+.ipynb_checkpoints/
+*.pyc
+__pycache__/
+data/
+results/
+models/
+*.pt
+*.joblib
+*.npy
