@@ -14,14 +14,14 @@ Lipophilicity (logP) – regression
 
 Tox21 NR-AR probability – binary classification
 
-Baseline models use molecular fingerprints, while the GNN+ models operate directly on molecular graphs.
+Baseline models use molecular fingerprints, while the GNN+ models operate directly on molecular graph representations.
 
 Modeling Approaches
 Baseline (Random Forest)
 
-Molecular fingerprints (RDKit)
+Molecular fingerprints generated using RDKit
 
-Scikit-learn Random Forest regressors/classifiers
+Scikit-learn Random Forest regressors and classifiers
 
 Strong and interpretable baseline performance
 
@@ -33,7 +33,7 @@ Node- and edge-level molecular representations
 
 Evaluated alongside RF for comparative analysis
 
-Note: GNN outputs for regression tasks may be in scaled space unless inverse transformation is applied.
+Note: GNN outputs for regression tasks may be reported in scaled space unless inverse transformation is applied.
 
 Repository Structure
 ChemAI/
@@ -41,21 +41,19 @@ ChemAI/
 ├── 01_make_benchmark.py
 ├── 02_eval_baseline.py
 ├── 03_baseline_plots.py
-├── 04_train_gnn_multitask.py
 ├── 06_train_gnn_plus.py
 ├── 07_train_gnn_plus_improved.py
 ├── 08_make_comparison_plots.py
 ├── app.py                     # Streamlit demo app (local)
-├── chem-ai-2.ipynb             # Development notebook
 ├── .gitignore
 └── README.md
 
 
-Large datasets, trained models, and intermediate result files are excluded from version control.
+Large datasets, trained models, and intermediate result files are intentionally excluded from version control.
 
 Streamlit Web Application
 
-A local Streamlit application is included for demonstration purposes:
+A Streamlit-based web application is included for demonstration purposes.
 
 Input: SMILES string
 
@@ -65,22 +63,23 @@ Random Forest (baseline)
 
 GNN+ (experimental)
 
-The app is intended for local demo and screenshots.
-Public deployment will be released after further validation and robustness testing.
+The application is currently available as a local interactive demo for testing and screenshots.
+Public deployment will be released following additional validation and robustness testing.
 
 Evaluation & Comparison
 
-Model performance is assessed using:
+Model performance is assessed using standard metrics:
 
 Regression: R², MAE
 
 Classification: ROC-AUC, PR-AUC, Accuracy
 
-Comparative plots (RF vs GNN+) are generated using the provided analysis scripts.
+Comparative performance plots (RF vs GNN+) are generated using the provided analysis scripts.
 
-Data & Model Availability
+Data & Code Availability
 
-Due to size constraints and licensing considerations:
+All datasets used in this study were obtained from publicly available sources.
+Due to size constraints and licensing considerations, the following are not included in this repository:
 
 Raw datasets
 
@@ -88,9 +87,10 @@ Trained model weights
 
 Intermediate result files
 
-are not included in this repository.
+Scripts are provided to reproduce the full modeling and evaluation pipeline given access to the original data sources.
 
-Scripts are provided to reproduce the full pipeline given access to the original data sources.
+GitHub Repository:
+https://github.com/rahatchowdhury8899-hub/ChemAI
 
 Intended Use
 
@@ -100,7 +100,7 @@ Academic research and benchmarking
 
 Educational use in chemoinformatics
 
-Method comparison (classical ML vs GNNs)
+Method comparison between classical machine learning and graph neural networks
 
 It is not intended for regulatory or clinical decision-making.
 
@@ -112,5 +112,5 @@ Begum Rokeya University, Rangpur, Bangladesh
 
 License
 
-This project is released for academic and research use only.
-Commercial use requires explicit permission from the author.
+This project is released under the MIT License.
+See the LICENSE file for details
