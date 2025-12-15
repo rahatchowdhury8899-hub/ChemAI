@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it."
+title: "ChemAI: Multi-property Chemical Prediction Framework"
+type: software
+authors:
+  - family-names: Chowdhury
+    given-names: Md Rahat
+repository-code: "https://github.com/rahatchowdhury8899-hub/ChemAI"
+license: MIT
+keywords:
+  - chemoinformatics
+  - molecular property prediction
+  - random forest
+  - graph neural networks
+  - rdkit
+  - tox21
+  - esol
