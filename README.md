@@ -36,17 +36,7 @@ Evaluated alongside RF for comparative analysis
 Note: GNN outputs for regression tasks may be reported in scaled space unless inverse transformation is applied.
 
 Repository Structure
-ChemAI/
-├── 00_fetch_esol.py
-├── 01_make_benchmark.py
-├── 02_eval_baseline.py
-├── 03_baseline_plots.py
-├── 06_train_gnn_plus.py
-├── 07_train_gnn_plus_improved.py
-├── 08_make_comparison_plots.py
-├── app.py                     # Streamlit demo app (local)
-├── .gitignore
-└── README.md
+ChemAI/ ├── 00_fetch_esol.py ├── 01_make_benchmark.py ├── 02_eval_baseline.py ├── 03_baseline_plots.py ├── 06_train_gnn_plus.py ├── 07_train_gnn_plus_improved.py ├── 08_make_comparison_plots.py ├── app.py # Streamlit demo app (local) ├── .gitignore └── README.md
 
 
 Large datasets, trained models, and intermediate result files are intentionally excluded from version control.
