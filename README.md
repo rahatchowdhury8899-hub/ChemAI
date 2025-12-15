@@ -38,6 +38,13 @@ Note: GNN outputs for regression tasks may be reported in scaled space unless in
 Repository Structure
 ChemAI/ ├── 00_fetch_esol.py ├── 01_make_benchmark.py ├── 02_eval_baseline.py ├── 03_baseline_plots.py ├── 06_train_gnn_plus.py ├── 07_train_gnn_plus_improved.py ├── 08_make_comparison_plots.py ├── app.py # Streamlit demo app (local) ├── .gitignore └── README.md
 
+```markdown
+Repository Structure ChemAI/
+├── 00_fetch_esol.py·· (এখানে দুটি স্পেস)
+├── 01_make_benchmark.py·· (এখানে দুটি স্পেস)
+├── 02_eval_baseline.py
+...
+
 
 Large datasets, trained models, and intermediate result files are intentionally excluded from version control.
 
