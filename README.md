@@ -1,39 +1,44 @@
 ChemAI – Multi-property Chemical Prediction Framework
+Overview
 
-ChemAI is a unified chemoinformatics framework for predicting multiple chemical properties using both classical machine-learning models and graph neural networks (GNNs). The project integrates baseline Random Forest (RF) models with an experimental GNN+ architecture to benchmark performance across physicochemical and toxicological endpoints.
+ChemAI is a unified chemoinformatics framework for multi-property chemical prediction using both classical machine-learning models and graph neural networks (GNNs). The project benchmarks a strong Random Forest (RF) baseline against an experimental GNN+ architecture across physicochemical and toxicological endpoints.
 
-This repository accompanies an undergraduate research project in Chemistry and is designed for reproducibility, benchmarking, and academic dissemination.
+This repository accompanies an academic research project and is designed with a focus on reproducibility, transparent benchmarking, and methodological comparison between fingerprint-based and graph-based modeling approaches.
 
 Predicted Properties
 
-ChemAI currently supports prediction of the following properties:
+ChemAI currently supports prediction of the following molecular properties:
 
 Aqueous solubility (logS) – regression
 
 Lipophilicity (logP) – regression
 
-Tox21 NR-AR probability – binary classification
+Tox21 NR-AR activity – binary classification (probability output)
 
-Baseline models use molecular fingerprints, while the GNN+ models operate directly on molecular graph representations.
+Baseline models rely on molecular fingerprints, while GNN+ models learn directly from molecular graph representations.
 
 Modeling Approaches
-Baseline (Random Forest)
+Baseline: Random Forest (RF)
 
-Molecular fingerprints generated using RDKit
+RDKit-generated molecular fingerprints
 
 Scikit-learn Random Forest regressors and classifiers
 
-Strong and interpretable baseline performance
+Strong, interpretable baseline performance
 
-GNN+ (Experimental)
+Particularly effective under sparse or imbalanced data conditions
 
-Graph Neural Network with multitask learning
+GNN+: Graph Neural Network (Experimental)
+
+Multitask graph neural network architecture
 
 Node- and edge-level molecular representations
 
-Evaluated alongside RF for comparative analysis
+End-to-end learning of structure–property relationships
 
-Note: GNN outputs for regression tasks may be reported in scaled space unless inverse transformation is applied.
+Evaluated alongside RF models for direct comparison
+
+Note: GNN regression outputs may be reported in scaled space unless inverse scaling is applied using training scalers.
 
 ```markdown
 Repository Structure
@@ -45,50 +50,59 @@ ChemAI/
 ├── 06_train_gnn_plus.py
 ├── 07_train_gnn_plus_improved.py
 ├── 08_make_comparison_plots.py
-├── app.py                     # Streamlit demo app (local)
+├── app.py                     # Streamlit demo application (local)
 ├── .gitignore
 └── README.md
 
 
-Large datasets, trained models, and intermediate result files are intentionally excluded from version control.
+Large datasets, trained model weights, and intermediate result files are intentionally excluded from version control to keep the repository lightweight and publicly shareable.
 
-Streamlit Web Application
-
-A Streamlit-based web application is included for demonstration purposes.
-
-Input: SMILES string
-
-Output: Predictions from
-
-Random Forest (baseline)
-
-GNN+ (experimental)
-
-The application is currently available as a local interactive demo for testing and screenshots.
-Public deployment will be released following additional validation and robustness testing.
-
-Evaluation & Comparison
+Evaluation and Comparison
 
 Model performance is assessed using standard metrics:
 
-Regression: R², MAE
+Regression: R², Mean Absolute Error (MAE)
 
 Classification: ROC-AUC, PR-AUC, Accuracy
 
-Comparative performance plots (RF vs GNN+) are generated using the provided analysis scripts.
+Comparative analyses include:
 
-Data & Code Availability
+True vs. predicted scatter plots
 
-All datasets used in this study were obtained from publicly available sources.
+ROC curves for NR-AR classification
+
+Metric-based performance comparisons between RF and GNN+ models
+
+All plots are generated using the provided analysis scripts.
+
+Streamlit Web Application
+
+A Streamlit-based web application is included for interactive demonstration.
+
+Input:
+
+SMILES string
+
+Output:
+
+Predictions from Random Forest (baseline)
+
+Predictions from GNN+ (experimental)
+
+The application is currently provided as a local demo for testing, visualization, and screenshots. Public deployment will follow additional validation and robustness testing.
+
+Data and Code Availability
+
+All datasets used in this project originate from publicly available sources.
 Due to size constraints and licensing considerations, the following are not included in this repository:
 
 Raw datasets
 
-Trained model weights
+Trained model checkpoints
 
 Intermediate result files
 
-Scripts are provided to reproduce the full modeling and evaluation pipeline given access to the original data sources.
+Scripts are provided to fully reproduce the modeling and evaluation pipeline, given access to the original data sources.
 
 GitHub Repository:
 https://github.com/rahatchowdhury8899-hub/ChemAI
@@ -99,11 +113,11 @@ This project is intended for:
 
 Academic research and benchmarking
 
-Educational use in chemoinformatics
+Educational use in chemoinformatics and machine learning
 
-Method comparison between classical machine learning and graph neural networks
+Methodological comparison between classical ML and GNN approaches
 
-It is not intended for regulatory or clinical decision-making.
+It is not intended for regulatory, clinical, or decision-making use.
 
 Author
 
@@ -114,4 +128,4 @@ Begum Rokeya University, Rangpur, Bangladesh
 License
 
 This project is released under the MIT License.
-See the LICENSE file for details
+See the LICENSE file for details.
