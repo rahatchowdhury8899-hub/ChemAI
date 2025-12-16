@@ -38,7 +38,7 @@ Note: GNN outputs for regression tasks may be reported in scaled space unless in
 ```markdown
 Repository Structure
 ChemAI/
-├── 00_fetch_esol.py
+├── 00_fetch_esol_direct.py
 ├── 01_make_benchmark.py
 ├── 02_eval_baseline.py
 ├── 03_baseline_plots.py

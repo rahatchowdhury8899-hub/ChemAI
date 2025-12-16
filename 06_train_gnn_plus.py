@@ -240,6 +240,9 @@ for epoch in range(1, EPOCHS + 1):
                 loss = loss + F.binary_cross_entropy_with_logits(out_NR[mN], y[mN, 2])
             else:
                 loss = loss + F.binary_cross_entropy_with_logits(out_NR[mN], y[mN, 2], pos_weight=pos_weight)
+       
+        if (loss is None) or (not torch.is_tensor(loss)) or (not loss.requires_grad):
+            continue
 
         loss.backward()
         opt.step()
