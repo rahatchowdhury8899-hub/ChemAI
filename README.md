@@ -53,7 +53,7 @@ ChemAI/
 ├── app.py                     # Streamlit demo application (local)
 ├── .gitignore
 └── README.md
-
+```
 
 Large datasets, trained model weights, and intermediate result files are intentionally excluded from version control to keep the repository lightweight and publicly shareable.
 
